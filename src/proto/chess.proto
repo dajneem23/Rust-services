@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package chess;
+
+service Chess {
+    rpc GetGame (GameRequest) returns (GameResponse);
+}
+
+message GameRequest {
+    string id = 1;
+}
+
+message GameResponse {
+    string id = 1;
+    string white = 2;
+    string black = 3;
+    string result = 4;
+    string moves = 5;
+}
